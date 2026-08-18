@@ -1,7 +1,15 @@
 # QSS 20 Final Project README (Maeve Padien)
-#### Analyzing the economic impact of hosting the World Cup on poor, urban households
+### Analyzing the economic impact of hosting the World Cup on poor, urban households
+##### *This is only my intital README from 8/18. It will be changed and updated as I continue to work on and refine my final project*
 
-### Project Description
-FIFA promotes the World Cup as an opportunity to alleviate poverty, bring tourism, and solve economic problems. Underneath that claim  is an idea that a spurt of growth and tourism across a very brief time permanently due to the tournament helps poor households in the country. This project tests FIFA's claim. It asks if hosting the World Cup promotes development, if it supports poor households in the country, and if any changes are lasting. It considers if hosting exacerbates exisiting issues of inequality and poverty. 
+## Project Description
+FIFA promotes the World Cup as an opportunity to alleviate poverty, bring tourism, and solve economic problems. Underneath that claim  is an idea that a spurt of growth and tourism across a very brief time permanently due to the tournament helps poor households in the country. This project tests FIFA's claim. It asks if hosting the World Cup promotes development, if it supports poor households in the country, and if any changes are lasting. It considers if hosting exacerbates exisiting issues of inequality and poverty. This project also uses a particular definition of development. It centers on individuals and their experience in poverty. Development cannot just mean GDP growth, it must include an assessment of the living conditions and experiences of the poorest households. In this project, I look at two cases, the 2010 tournament in South Africa, and the 2014 tournament in Brazil. In particular, in each country I look at host and non-host cities to compare changes in economic outcomes. I use three different years for each tournament to address my temporal question.
 
-Through this project, I also want to be specific about my definition of development. Often the term is co-opted by groups with varying motivations, but I want a definition that centers on individuals and their experience in poverty. Development cannot just mean GDP growth, it must include an assessment of the living conditions and experiences of the poorest households. It is not feasible to look at every World Cup and every host city ever, and so I will focus on two cases. 
+#### Data Used
+For this project, I use continous national household surveys conduct by the government of Brazil and South Africa. PNAD Contínua is Brazil's survey, and I use data from 2012, 2014, and 2016. For South Africa, I use the Quarterly Labour Force Survey (QLFS) for the final quarter of 2008, 2010, and 2012. All of this data is open access through each country's respective statistics agency.
+
+## Overview of Notebooks
+##### The notebooks below walk through exactly how I produced my results. They are intended to run in order, beginning with 00_pull. In this README file, each notebook is listed and explains what inputs it takes in, the output produced, and the general method behind the coding.
+*As stated above, this is a work in progress for Milestone 2 (8/18), and will be updated as I go*
+
+
