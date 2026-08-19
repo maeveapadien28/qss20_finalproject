@@ -17,4 +17,5 @@ The Brazil data is downloaded via the website SIDRA which is hosted by the gover
 ##### The notebooks below walk through exactly how I produced my results. They are intended to run in order, beginning with 00_pull. In this README file, each notebook is listed and explains what inputs it takes in, the output produced, and the general method behind the coding.
 *As stated above, this is a work in progress for Milestone 2 (8/18), and will be updated as I go*
 
-
+#### 00_pull_clean
+This notebook takes in raw data from each household survey. These files are downloaded directly from the DataFirst and SIDRA website as explained above. For South Africa, the notebook creates a new variable, a boolean "is_metro", and then keeps only the relevent columns for the rest of the project. That cleaned file is then saved as the output. For Brazil, since the data is in Portugese, I create new columns names in English, load the data, and create the same boolean as above. The datatable also has these footnotes that are irrelevent, so I drop them. I then save that cleaned file as the secondary output of this notebook.
