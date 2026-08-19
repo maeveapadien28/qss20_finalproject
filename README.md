@@ -19,3 +19,6 @@ The Brazil data is downloaded via the website SIDRA which is hosted by the gover
 
 #### 00_pull_clean
 This notebook takes in raw data from each household survey. These files are downloaded directly from the DataFirst and SIDRA website as explained above. For South Africa, the notebook creates a new variable, a boolean "is_metro", and then keeps only the relevent columns for the rest of the project. That cleaned file is then saved as the output. For Brazil, since the data is in Portugese, I create new columns names in English, load the data, and create the same boolean as above. The datatable also has these footnotes that are irrelevent, so I drop them. I then save that cleaned file as the secondary output of this notebook.
+
+#### 01_analysis
+This notebook takes in the cleaned South Africa data from the 00_pull_clean notebook. It then computes informal and unemployment rates for host and non-host regions in South Africa by using the lamda function to apply a boolean operator and mean function. It then creates two bar charts (contained in one plot) of informal and unemployment rates for the two categories. That chart is the output of this notebook.
