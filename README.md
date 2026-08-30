@@ -29,7 +29,7 @@ data/brazil_lstatus.csv, data/brazil_socialsecurity.csv, data/brazil_hours.csv, 
 
 ### 01_clean
 ### [code/01_clean.ipynb](code/01_clean.ipynb)
-##### This notebook takes in the intermediate data files from 00_pull and produces the calculated variables required for the analysis. It also standarizes city names across datasets as the national survey altered them each year. It then creates a flag variable to tag each location as a host or non host. Then, it reduces the Brazilan dataset to only three host and nonhost regions (6 total) in order to be able to better compare (matched roughly on population). Finally, it computes Brazil's informal employment rate via the social security table. It does that by saying informal employment is equal to employees who pay social security divided by all employed. All formal employees must pay social security, so this can be used similary to the South Africa variable on informality.
+##### This notebook takes in the intermediate data files from 00_pull and produces the calculated variables required for the analysis. It also standarizes city names across datasets as the national survey altered them each year. It then creates a flag variable to tag each location as a host or non host. Then, it reduces the Brazilan dataset to only three host and nonhost regions (6 total) in order to be able to better compare (matched roughly on population). Finally, it computes Brazil's informal employment rate via the social security table. It does that by saying informal employment is equal to employees who do not pay social security divided by all employed. All formal employees must pay social security, so this can be used similary to the South Africa variable on informality.
 
 ##### ***Input***
 data/southafrica_all.dta
@@ -48,4 +48,4 @@ data/southafrica_analysis.dta
 data/brazil_socialsecurity_analysis.csv, data/brazil_hours_analysis.csv, data/brazil_income_analysis.csv
 
 ##### ***Output***
-fig1_informality_aggregate.png, fig2_informality_disaggregate.png, fig3_johannesburg_gender.png, fig4_johannesburg_sectors.png
+output/fig1_informality_aggregate.png, output/fig2_informality_disaggregate.png, output/fig3_johannesburg_gender.png, output/fig4_johannesburg_sectors.png
