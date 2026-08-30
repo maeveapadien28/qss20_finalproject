@@ -1,1 +1,1 @@
-This folder contains all jupyter notebooks used to produce my project. More details are in the general ReadMe folder at the beginning of the repo.
+This folder contains all jupyter notebooks used to produce my project. More details are in the general ReadMe folder at the beginning of the repo. All required elements for the ReadME are in the general landing page for this assignment
