@@ -14,10 +14,26 @@ The South Africa data can be downloaded from the Department of Statistics of Sou
 The Brazil data is downloaded via the website SIDRA which is hosted by the government agency in charge of the household survey. To get each table, a user goes to the site and selects the variables, time period, and locations desired. Since this is a more particular process, the xlsx that process produced also exists in this repo, in the data folder. If interested, here is the link to the SIDRA site: https://sidra.ibge.gov.br. Select the PNAD tab, then the tiny list button on the header, and select the tables required. (4093, 5947, 6371, 5439)
 
 ## Overview of Notebooks
-##### The notebooks below walk through exactly how I produced my results. They are intended to run in order, beginning with 00_pull. In this README file, each notebook is listed and explains what inputs it takes in, the output produced, and the general method behind the coding.
+##### The notebooks below walk through exactly how I produced my results. They are intended to run in order, beginning with 00_pull. In this README file, each notebook is listed and explains what inputs it takes in, the output produced, and the general method behind the coding. Order: 00_pull, 01_clean, 02_analysis
 
-#### 00_pull_clean
-This notebook takes in raw data from each household survey. These files are downloaded directly from the DataFirst and SIDRA website as explained above. For South Africa, the notebook creates a new variable, a boolean "is_metro", and then keeps only the relevent columns for the rest of the project. That cleaned file is then saved as the output. For Brazil, since the data is in Portugese, I create new columns names in English, load the data, and create the same boolean as above. The datatable also has these footnotes that are irrelevent, so I drop them. I then save that cleaned file as the secondary output of this notebook.
+### 00_pull
+##### This notebook takes in all of the raw data files (as explained above), and then stacks all of the South Africa data into one DataFrame. It also standarizes naming inconsistencies across years. For Brazil, since all of the variables are different, the notebook leaves them as seperate files. However, it translates the information from Portugese to English, and removes header and source rows. Since this is a repeatative process done four seperate times, the notebook uses a function to execute. Once those changes are made, it saves the intermediate data files described below.
 
-#### 01_analysis
-This notebook takes in the cleaned South Africa data from the 00_pull_clean notebook. It then computes informal and unemployment rates for host and non-host regions in South Africa by using the lamda function to apply a boolean operator and mean function. It then creates two bar charts (contained in one plot) of informal and unemployment rates for the two categories. That chart is the output of this notebook.
+##### **Input**
+data/southafrica_2008.dta, data/southafrica_2010.dta, data/southafrica_2012.dta
+data/brazil_4092.xlsx, data/brazil_5947.xlsx, data/brazil_6371.xlsx, data/brazil_5439.xlsx
+
+##### **Output**
+data/southafrica_all.dta
+data/brazil_lstatus.csv, data/brazil_socialsecurity.csv, data/brazil_hours.csv, data/brazil_income.csv
+
+### 01_analysis
+##### This notebook takes in the intermediate data files from 00_pull and produces the calculated variables required for the analysis. It also standarizes city names across datasets as the national survey altered them each year. It then creates a flag variable to tag each location as a host or non host. Then, it reduces the Brazilan dataset to only three host and nonhost regions (6 total) in order to be able to better compare (matched roughly on population). Finally, it computes Brazil's informal employment rate via the social security table. It does that by saying informal employment is equal to employees who pay social security divided by all employed. All formal employees must pay social security, so this can be used similary to the South Africa variable on informality.
+
+##### **Input**
+data/southafrica_all.dta
+data/brazil_lstatus.csv, data/brazil_socialsecurity.csv, data/brazil_hours.csv, data/brazil_income.csv
+
+##### **Output**
+data/southafrica_analysis.dta
+data/brazil_socialsecurity_analysis.csv, data/brazil_hours_analysis.csv, data/brazil_income_analysis.csv
