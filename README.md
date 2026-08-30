@@ -12,6 +12,11 @@ The South Africa data can be downloaded from the Department of Statistics of Sou
 
 The Brazil data is downloaded via the website SIDRA which is hosted by the government agency in charge of the household survey. To get each table, a user goes to the site and selects the variables, time period, and locations desired. Since this is a more particular process, the xlsx that process produced also exists in this repo, in the data folder. If interested, here is the link to the SIDRA site: https://sidra.ibge.gov.br. Select the PNAD tab, then the tiny list button on the header, and select the tables required. (4093, 5947, 6371, 5439)
 
+### Repo Structure
+This main page is the general README for the project. All other folders have very brief README files, but they are not to be used as the intended file. Refer here with any questions.
+
+The data directory contains all raw files, and then the intermediate files I produced. Any user, shoudl they run my notebooks, can produce those intermediate files. For completion purposes, I added them, but they are not necessary. The code directory contains three notebooks to be run in order. Those are explained in detail below. There is also my Milestone 1 notebook, again for completion. At this point, however, it is completely historical and does not have any bearing on the final product. Finally, the output directory contains the four figures produced and used in this project.
+
 ## Overview of Notebooks
 ##### The notebooks below walk through exactly how I produced my results. They are intended to run in order, beginning with 00_pull. In this README file, each notebook is listed and explains what inputs it takes in, the output produced, and the general method behind the coding. Order: 00_pull, 01_clean, 02_analysis
 
