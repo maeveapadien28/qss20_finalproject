@@ -1,2 +1,14 @@
 This folder contains all the raw data I downloaded onto my computer to conduct my analysis. The general ReadME gives a more detailed description of that process.
 It also contains my versions of the intermediate data while executing the notebooks. Please note all can be run by anyone on their own device, I am just recording intermediates for completion.
+
+## Explaination of Structure:
+
+### Raw Files
+All files labeled with a four digit number and then Brazil.xslx are raw data that anyone can download from the links provided (i.e. 1234_brazil.xlsx)
+Similarily, the dta files labeled southafrica_[year].dta are the raw files that can be downloaded
+
+### Intermediate Files
+The 00_pull notebook's output is southafrica_all.dta, and then four Brazil files which follow the format brazil_lstatus.csv, brazil_socialsecurity.csv, brazil_hours.csv, brazil_income.csv.
+
+The 01_clean notebook's output files are all labeled with a trailing analysis, to indicate they are to be used in the final notebook.
+(southafrica_analysis.dta, brazil_lstatus_analysis.csv, brazil_socialsecurity_analysis.csv, brazil_hours_analysis.csv, brazil_income_analysis.csv
