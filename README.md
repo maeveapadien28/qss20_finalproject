@@ -11,11 +11,10 @@ For this project, I use continous national household surveys conduct by the gove
 #### Data Access
 The South Africa data can be downloaded from the Department of Statistics of South Africa website. The University of Cape Town operates the DataFirst platform which organizes the raw Stata files from South Africa, and users can directly download those files by selecting the appropriate year, as I did. Here is the link to the DataFirst site: https://www.datafirst.uct.ac.za/dataportal/index.php/catalog/214
 
-The Brazil data is downloaded via the website SIDRA which is hosted by the government agency in charge of the household survey. To get each table, a user goes to the site and selects the variables, time period, and locations desired. Since this is a more particular process, the xlsx that process produced also exists in this repo, in the data folder. If interested, here is the link to the SIDRA site: https://sidra.ibge.gov.br.
+The Brazil data is downloaded via the website SIDRA which is hosted by the government agency in charge of the household survey. To get each table, a user goes to the site and selects the variables, time period, and locations desired. Since this is a more particular process, the xlsx that process produced also exists in this repo, in the data folder. If interested, here is the link to the SIDRA site: https://sidra.ibge.gov.br. Select the PNAD tab, then the tiny list button on the header, and select the tables required. (4093, 5947, 6371, 5439)
 
 ## Overview of Notebooks
 ##### The notebooks below walk through exactly how I produced my results. They are intended to run in order, beginning with 00_pull. In this README file, each notebook is listed and explains what inputs it takes in, the output produced, and the general method behind the coding.
-*As stated above, this is a work in progress for Milestone 2 (8/18), and will be updated as I go*
 
 #### 00_pull_clean
 This notebook takes in raw data from each household survey. These files are downloaded directly from the DataFirst and SIDRA website as explained above. For South Africa, the notebook creates a new variable, a boolean "is_metro", and then keeps only the relevent columns for the rest of the project. That cleaned file is then saved as the output. For Brazil, since the data is in Portugese, I create new columns names in English, load the data, and create the same boolean as above. The datatable also has these footnotes that are irrelevent, so I drop them. I then save that cleaned file as the secondary output of this notebook.
