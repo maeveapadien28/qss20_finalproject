@@ -12,3 +12,5 @@ The 00_pull notebook's output is southafrica_all.dta, and then four Brazil files
 
 The 01_clean notebook's output files are all labeled with a trailing analysis, to indicate they are to be used in the final notebook.
 (southafrica_analysis.dta, brazil_lstatus_analysis.csv, brazil_socialsecurity_analysis.csv, brazil_hours_analysis.csv, brazil_income_analysis.csv
+
+The intermediate South Africa dta files are too large to sit on this repo, but will be produced idenitically by running the notebooks.
