@@ -16,7 +16,7 @@ The Brazil data is downloaded via the website SIDRA which is hosted by the gover
 ##### The notebooks below walk through exactly how I produced my results. They are intended to run in order, beginning with 00_pull. In this README file, each notebook is listed and explains what inputs it takes in, the output produced, and the general method behind the coding. Order: 00_pull, 01_clean, 02_analysis
 
 ### 00_pull
-### ['code/00_pull.ipynb'](code/00_pull.ipynb)
+### [code/00_pull.ipynb](code/00_pull.ipynb)
 ##### This notebook takes in all of the raw data files (as explained above), and then stacks all of the South Africa data into one DataFrame. It also standarizes naming inconsistencies across years. For Brazil, since all of the variables are different, the notebook leaves them as seperate files. However, it translates the information from Portugese to English, and removes header and source rows. Since this is a repeatative process done four seperate times, the notebook uses a function to execute. Once those changes are made, it saves the intermediate data files described below.
 
 ##### ***Input***
@@ -28,7 +28,7 @@ data/southafrica_all.dta
 data/brazil_lstatus.csv, data/brazil_socialsecurity.csv, data/brazil_hours.csv, data/brazil_income.csv
 
 ### 01_clean
-### ['code/01_clean.ipynb'](code/01_clean.ipynb)
+### [code/01_clean.ipynb](code/01_clean.ipynb)
 ##### This notebook takes in the intermediate data files from 00_pull and produces the calculated variables required for the analysis. It also standarizes city names across datasets as the national survey altered them each year. It then creates a flag variable to tag each location as a host or non host. Then, it reduces the Brazilan dataset to only three host and nonhost regions (6 total) in order to be able to better compare (matched roughly on population). Finally, it computes Brazil's informal employment rate via the social security table. It does that by saying informal employment is equal to employees who pay social security divided by all employed. All formal employees must pay social security, so this can be used similary to the South Africa variable on informality.
 
 ##### ***Input***
@@ -40,7 +40,7 @@ data/southafrica_analysis.dta
 data/brazil_socialsecurity_analysis.csv, data/brazil_hours_analysis.csv, data/brazil_income_analysis.csv
 
 ### 02_analysis
-### ['code/02_analysis.ipynb'](code/02_analysis.ipynb)
+### [code/02_analysis.ipynb](code/02_analysis.ipynb)
 #### This notebook takes in the intermediate data files from the 01_clean notebook. It then computes the informal employment rates by year and host status for both Brazil and South Africa. It then disaggregates that rate to consider per-city changes to informal employment from two years after the tournament from two years before. It then looks specifically at Johannesburg and calculates the informal employment rate over time there by both gender and then sector (i.e. construction, retail). Finally, it produces the four figures based on those calculations.
 
 ##### ***Input***
